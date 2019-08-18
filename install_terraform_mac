@@ -1,0 +1,13 @@
+### How to install terraform in Mac
+
+0 - Install brew
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+1 - Install Terraform
+
+$ brew install 
+
+3 - Check version Terraform
+
+$ terraform -v
