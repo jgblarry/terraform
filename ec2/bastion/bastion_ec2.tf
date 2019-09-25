@@ -13,7 +13,7 @@ module "complete_sg" {
     },
     {
       rule        = "ssh-tcp"
-      cidr_blocks = "52.59.163.150/32"
+      cidr_blocks = "90.169.238.95/32"
     },
   ]
 
@@ -70,15 +70,15 @@ module "ec2_cluster" {
   name    = "Bastion-Jenkins"
 
   #instance_count         = "1"
-  ami                         = "${data.aws_ami.amazon.id}"
-  instance_type               = "${var.instance-type}"
-  key_name                    = "${var.bastion_name}"
-  monitoring                  = true
-  user_data                   = "${data.template_file.userdata.rendered}"
-  iam_instance_profile        = "${aws_iam_instance_profile.bastion_profile.name}"
-  vpc_security_group_ids      = ["${module.complete_sg.this_security_group_id}"]
+  ami                    = "${data.aws_ami.amazon.id}"
+  instance_type          = "${var.instance-type}"
+  key_name               = "${var.bastion_name}"
+  monitoring             = true
+  user_data              = "${data.template_file.userdata.rendered}"
+  iam_instance_profile   = "${aws_iam_instance_profile.bastion_profile.name}"
+  vpc_security_group_ids = ["${module.complete_sg.this_security_group_id}"]
   #associate_public_ip_address = true
-  subnet_id                   = "${data.terraform_remote_state.vpc.outputs.public_subnet_ids[2]}"
+  subnet_id = "${data.terraform_remote_state.vpc.outputs.public_subnet_ids[2]}"
 
   tags = {
     Terraform   = "${var.terraform}"

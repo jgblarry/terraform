@@ -1,16 +1,16 @@
 #Config remote state
 terraform {
   backend "s3" {
-    bucket = "nubersia-terraform-state"
-    key    = "states/nubersia/terraform.tfstate"
+    bucket = "jgblarry-terraform"
+    key    = "states/vcp_terraform.tfstate"
     region = "eu-west-1"
   }
 }
 
 # Configuracion del provider AWS
 provider "aws" {
-  version    = "~> 2.8"
-  region     = var.region
+  version = "~> 2.8"
+  region  = var.region
 }
 
 # Using these data sources allows the configuration to be

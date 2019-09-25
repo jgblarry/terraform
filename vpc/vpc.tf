@@ -7,7 +7,7 @@ module "vpc" {
 
   #Subnets
   #azs              = ["${data.aws_availability_zones.available.names}"]
-  azs             = ["${var.azs[0]}", "${var.azs[1]}", "${var.azs[2]}"]
+  azs              = ["${var.azs[0]}", "${var.azs[1]}", "${var.azs[2]}"]
   public_subnets   = ["${var.vpc_subnet_cidr[0]}", "${var.vpc_subnet_cidr[1]}", "${var.vpc_subnet_cidr[2]}"]
   private_subnets  = ["${var.vpc_subnet_cidr[3]}", "${var.vpc_subnet_cidr[4]}", "${var.vpc_subnet_cidr[5]}"]
   database_subnets = ["${var.vpc_subnet_cidr[6]}", "${var.vpc_subnet_cidr[7]}", "${var.vpc_subnet_cidr[8]}"]
@@ -29,7 +29,7 @@ module "vpc" {
   tags = {
     Terraform   = "true"
     Environment = "${var.env}"
-    Create      = "Nubersia"
+    Create      = "${var.create}"
     Project     = "${var.project}"
   }
 }

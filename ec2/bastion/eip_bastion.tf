@@ -1,6 +1,6 @@
 #CREATE EIP AND ASSOCIATED WITH AN INSTANCE
 resource "aws_eip" "eip_bastion" {
-  vpc      = true
+  vpc = true
 }
 
 resource "aws_eip_association" "eip_assoc_bastion" {

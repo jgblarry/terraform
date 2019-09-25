@@ -4,7 +4,7 @@ variable "vpc_cidr" {
 }
 
 variable "azs" {
-  default = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
+  default = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
   type    = "list"
 }
 
@@ -24,21 +24,23 @@ variable "vpc_subnet_cidr" {
   type = "list"
 }
 
-variable "access_key" {
-}
+#variable "access_key" {
+#}
 
-variable "secret_key" {
-}
+/*variable "secret_key" {
+}*/
 
 variable "region" {
-  default = "eu-west-1"
+  default = "eu-west-2"
 }
 
 variable "project" {
-  default = "Terraform"
+  default = "JGB_proyecto"
 }
 
 variable "env" {
-  default = "Prod"
+  default = "Desa"
 }
-
+variable "create" {
+  default = "jgblarry"
+}

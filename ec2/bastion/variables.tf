@@ -2,9 +2,6 @@
 variable "region" {
   default = "eu-west-2"
 }
-variable "region_bucket" {
-  default = "eu-west-1"
-}
 
 #INSTANCIA
 variable "rsa_bits" {
@@ -42,7 +39,7 @@ variable "project" {
 }
 variable "creator" {
   description = "Deploymente by"
-  default     = "Nubersia"
+  default     = "jgblarry"
 }
 variable "terraform" {
   description = "Terraform Template"

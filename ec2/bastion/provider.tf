@@ -1,16 +1,16 @@
 # REMOTE STATE CONFIGURE
 terraform {
   backend "s3" {
-    bucket = "nubersia-terraform-state"
-    key    = "states/nubersia/terraform_bastion.tfstate"
+    bucket = "jgblarry-terraform"
+    key    = "states/bastion_terraform.tfstate"
     region = "eu-west-1"
   }
 }
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
-    bucket = "nubersia-terraform-state"
-    key    = "states/nubersia/terraform.tfstate"
+    bucket = "jgblarry-terraform"
+    key    = "states/vcp_terraform.tfstate"
     region = "eu-west-1"
   }
 }
