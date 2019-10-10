@@ -13,3 +13,6 @@ output "private_subnet_ids" {
 output "database_subnet_ids" {
   value = module.vpc.database_subnets
 }
+output "vpc_cidr" {
+  value = module.vpc.vpc_cidr_block
+}
